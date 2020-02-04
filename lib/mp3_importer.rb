@@ -6,12 +6,12 @@ class MP3Importer
     @path = path 
   end 
   @filenames = [] 
-  def files
+  def files(path)
     Dir.chdir(@path) do |path|
       Dir.glob("*.mp3")
     end 
   end 
-  def import
+  def import(path)
     files.each do |filename| 
       Song.new_by_filename(filename)
     end 
