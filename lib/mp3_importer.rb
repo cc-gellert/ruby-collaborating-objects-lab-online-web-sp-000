@@ -10,7 +10,8 @@ class MP3Importer
     #do |path|
       #Dir.glob("*.mp3")
     #end 
-  end 
+  end
+  binding.pry 
   def import
     files.each do |filename| 
       Song.new_by_filename(filename)
