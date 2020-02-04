@@ -6,10 +6,9 @@ class MP3Importer
     @path = path 
   end 
   def files
-    toSort = Dir.entries(@path) 
-    #do |path|
-      #Dir.glob("*.mp3")
-    #end 
+    Dir.chdir(@path) do |path|
+      Dir.glob("*.mp3")
+    end
   end
   binding.pry 
   def import
