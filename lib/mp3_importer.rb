@@ -10,7 +10,6 @@ class MP3Importer
       Dir.glob("*.mp3")
     end 
     @filenames
-    binding.pry 
   end 
   def import
     @filenames.each do |filename| 
