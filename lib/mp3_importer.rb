@@ -6,7 +6,7 @@ class MP3Importer
     @path = path 
   end 
   def files
-    Dir.entries(@path) do |path|
+    Dir.entries(@path, encoding:) do |path|
       Dir.glob("*.mp3")
     end 
   end 
